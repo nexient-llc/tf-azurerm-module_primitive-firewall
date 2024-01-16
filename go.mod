@@ -1,4 +1,4 @@
-module github.com/nexient-llc/tf-module-skeleton
+module github.com/nexient-llc/tf-azurerm-collection_module-firewall
 
 go 1.15
 
