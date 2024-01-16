@@ -11,7 +11,27 @@
 # // limitations under the License.
 
 # //outputs by firewall module
-output "firewalls" {
-  value       = module.firewall.firewalls
-  description = "The output of the firwall module"
+output "firewall_ids" {
+  value       = module.firewall.firewall_ids
+  description = "Firewall generated ids"
+}
+
+output "firewall_names" {
+  value       = module.firewall.firewall_names
+  description = "Firewall names"
+}
+
+output "private_ip_addresses" {
+  value       = module.firewall.private_ip_addresses
+  description = "Firewall private IP"
+}
+
+output "public_ip_addresses" {
+  value       = module.firewall.public_ip_addresses
+  description = "Firewall public IP"
+}
+
+output "subnet_ids" {
+  value       = module.firewall.subnet_ids
+  description = "ID of the subnet attached to the firewall"
 }

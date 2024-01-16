@@ -70,5 +70,9 @@ No resources.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_firewalls"></a> [firewalls](#output\_firewalls) | The output of the firwall module |
+| <a name="output_firewall_ids"></a> [firewall\_ids](#output\_firewall\_ids) | Firewall generated ids |
+| <a name="output_firewall_names"></a> [firewall\_names](#output\_firewall\_names) | Firewall names |
+| <a name="output_private_ip_addresses"></a> [private\_ip\_addresses](#output\_private\_ip\_addresses) | Firewall private IP |
+| <a name="output_public_ip_addresses"></a> [public\_ip\_addresses](#output\_public\_ip\_addresses) | Firewall public IP |
+| <a name="output_subnet_ids"></a> [subnet\_ids](#output\_subnet\_ids) | ID of the subnet attached to the firewall |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
