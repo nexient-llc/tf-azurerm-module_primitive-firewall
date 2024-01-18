@@ -15,7 +15,7 @@ No providers.
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_firewall"></a> [firewall](#module\_firewall) | ../.. | n/a |
-| <a name="module_network"></a> [network](#module\_network) | git::https://github.com/nexient-llc/tf-azurerm-collection_module-virtual_network.git | fix/variable_types |
+| <a name="module_network"></a> [network](#module\_network) | git::https://github.com/nexient-llc/tf-azurerm-collection_module-virtual_network.git | 0.1.1 |
 | <a name="module_resource_group_hub"></a> [resource\_group\_hub](#module\_resource\_group\_hub) | git::https://github.com/nexient-llc/tf-azurerm-module-resource_group.git | 0.2.0 |
 | <a name="module_resource_names"></a> [resource\_names](#module\_resource\_names) | git::https://github.com/nexient-llc/tf-module-resource_name.git | 1.0.0 |
 
