@@ -118,12 +118,6 @@ variable "network_rule_collections" {
 }
 
 
-variable "public_ip_custom_name" {
-  type        = string
-  description = "Custom name for the public IP"
-  default     = null
-}
-
 variable "public_ip_zones" {
   type        = list(number)
   description = "(Optional)Public IP zones to configure."
@@ -152,7 +146,7 @@ variable "resource_names_map" {
   }))
 
   default = {
-    resource_group_hub = {
+    resource_group = {
       name       = "rg"
       max_length = 80
       region     = "eastus"
@@ -180,25 +174,16 @@ variable "resource_names_map" {
   }
 }
 
-variable "naming_prefix" {
-  description = "Prefix for the provisioned resources."
-  type        = string
-  default     = "platform"
-}
-
 variable "environment_number" {
   description = "The environment count for the respective environment. Defaults to 000. Increments in value of 1"
   default     = "001"
+  type        = string
 }
 
 variable "resource_number" {
   description = "The resource count for the respective resource. Defaults to 000. Increments in value of 1"
   default     = "001"
-}
-
-variable "region" {
-  description = "AWS Region in which the infra needs to be provisioned"
-  default     = "eastus2"
+  type        = string
 }
 
 variable "logical_product_family" {

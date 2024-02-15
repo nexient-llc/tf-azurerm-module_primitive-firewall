@@ -15,31 +15,31 @@ module "firewall" {
 
   firewall_map = local.firewall_map
 
-  depends_on = [module.resource_group_hub, module.network]
+  depends_on = [module.resource_group, module.network]
 }
 
 
 module "network" {
-  source = "git::https://github.com/nexient-llc/tf-azurerm-collection_module-virtual_network.git?ref=0.1.1"
+  source = "git::https://github.com/nexient-llc/tf-azurerm-module_collection-virtual_network.git?ref=patch/ouputfix"
 
   network_map = local.network_map
 
-  depends_on = [module.resource_group_hub]
+  depends_on = [module.resource_group]
 }
 
-module "resource_group_hub" {
-  source = "git::https://github.com/nexient-llc/tf-azurerm-module-resource_group.git?ref=0.2.0"
+module "resource_group" {
+  source = "git::https://github.com/nexient-llc/tf-azurerm-module_primitive-resource_group.git?ref=0.2.0"
 
-  name     = local.resource_group_hub
+  name     = local.resource_group
   location = var.location
   tags = {
-    resource_name = local.resource_group_hub
+    resource_name = local.resource_group
   }
 }
 
 # This module generates the resource-name of resources based on resource_type, naming_prefix, env etc.
 module "resource_names" {
-  source = "git::https://github.com/nexient-llc/tf-module-resource_name.git?ref=1.0.0"
+  source = "git::https://github.com/nexient-llc/tf-module-resource_name.git?ref=1.1.0"
 
   for_each = var.resource_names_map
 

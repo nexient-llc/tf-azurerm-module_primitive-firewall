@@ -35,3 +35,8 @@ output "subnet_ids" {
   value       = module.firewall.subnet_ids
   description = "ID of the subnet attached to the firewall"
 }
+
+output "resource_group_name" {
+  value       = module.resource_group.name
+  description = "Resource group name"
+}

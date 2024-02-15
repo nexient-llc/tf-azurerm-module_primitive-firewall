@@ -12,26 +12,26 @@
 
 //outputs by firewall module
 output "firewall_ids" {
-  value       = values(module.firewall)[*].firewall_id
+  value       = { for k, v in var.firewall_map : k => module.firewall[k].firewall_id }
   description = "Firewall generated ids"
 }
 
 output "firewall_names" {
-  value       = values(module.firewall)[*].firewall_name
+  value       = { for k, v in var.firewall_map : k => module.firewall[k].firewall_name }
   description = "Firewall names"
 }
 
 output "private_ip_addresses" {
-  value       = values(module.firewall)[*].private_ip_address
-  description = "Firewall private IP"
+  value       = { for k, v in var.firewall_map : k => module.firewall[k].private_ip_address }
+  description = "Firewall private IPs"
 }
 
 output "public_ip_addresses" {
-  value       = values(module.firewall)[*].public_ip_address
-  description = "Firewall public IP"
+  value       = { for k, v in var.firewall_map : k => module.firewall[k].public_ip_address }
+  description = "Firewall public IPs"
 }
 
 output "subnet_ids" {
-  value       = values(module.firewall)[*].subnet_id
-  description = "ID of the subnet attached to the firewall"
+  value       = { for k, v in var.firewall_map : k => module.firewall[k].subnet_id }
+  description = "IDs of the subnet attached to the firewall"
 }

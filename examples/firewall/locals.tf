@@ -10,7 +10,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 locals {
-  resource_group_hub    = module.resource_names["resource_group_hub"].standard
+  resource_group        = module.resource_names["resource_group"].standard
   firewall_name         = module.resource_names["firewall"].standard
   public_ip_custom_name = module.resource_names["public_ip"].standard
   virtual_network_name  = module.resource_names["hub_vnet"].standard
@@ -23,12 +23,12 @@ locals {
       location              = var.location
       location_short        = var.location_short
       logs_destinations_ids = var.logs_destinations_ids
-      resource_group_name   = local.resource_group_hub
+      resource_group_name   = local.resource_group
       stack                 = var.stack
       subnet_cidr           = var.subnet_cidr
       virtual_network_name  = local.virtual_network_name
 
-      additional_public_ips           = var.additional_public_ips //Optional Variables
+      additional_public_ips           = var.additional_public_ips
       application_rule_collections    = var.application_rule_collections
       custom_diagnostic_settings_name = var.custom_diagnostic_settings_name
       custom_firewall_name            = local.firewall_name
@@ -60,7 +60,7 @@ locals {
       tracing_tags_prefix                                   = var.tracing_tags_prefix
 
       use_for_each        = var.use_for_each
-      resource_group_name = local.resource_group_hub
+      resource_group_name = local.resource_group
       vnet_location       = var.location
       subnet_names        = []
       location            = var.location
