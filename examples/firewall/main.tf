@@ -20,7 +20,7 @@ module "firewall" {
 
 
 module "network" {
-  source = "git::https://github.com/nexient-llc/tf-azurerm-module_collection-virtual_network.git?ref=patch/ouputfix"
+  source = "git::https://github.com/nexient-llc/tf-azurerm-module_collection-virtual_network.git?ref=0.2.1"
 
   network_map = local.network_map
 
