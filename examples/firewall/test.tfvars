@@ -1,8 +1,8 @@
 //variables for firewall module
 environment           = "demo"
 client_name           = "launch"
-location              = "East US"
-location_short        = "eastus"
+location              = "East US 2"
+location_short        = "eastus2"
 logs_destinations_ids = []
 stack                 = ""
 subnet_cidr           = "10.0.1.0/24"
@@ -39,7 +39,6 @@ network_rule_collections = [{
     ]
   }]
 }]
-
 //variables for network module
 address_space   = ["10.0.0.0/16"]
 subnet_prefixes = []

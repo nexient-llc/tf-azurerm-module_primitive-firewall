@@ -22,6 +22,7 @@ variable "firewall_map" {
     stack                 = string
     subnet_cidr           = optional(string)
     virtual_network_name  = string
+    firewall_policy_id    = optional(string)
     additional_public_ips = optional(list(object(
       {
         name                 = string,
@@ -69,4 +70,5 @@ variable "firewall_map" {
     sku_tier              = optional(string)
     zones                 = optional(list(number))
   }))
+  default = {}
 }

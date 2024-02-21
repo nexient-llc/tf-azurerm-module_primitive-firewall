@@ -16,7 +16,6 @@ module "firewall" {
 
   for_each = var.firewall_map
 
-
   client_name                     = each.value.client_name
   environment                     = each.value.environment
   location                        = each.value.location
@@ -38,4 +37,5 @@ module "firewall" {
   public_ip_zones                 = each.value.public_ip_zones
   sku_tier                        = each.value.sku_tier
   zones                           = each.value.zones
+  firewall_policy_id              = each.value.firewall_policy_id
 }
